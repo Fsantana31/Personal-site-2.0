@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Francisco Santana</title>
+
+    <!-- Le Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:400italic,400,900,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!--Le Body-->
+
+<body id="bg">
+    <div class="wrapper">
+        <header>
+            <a href="#top" id="logo">
+                <h1>FS</h1>
+            </a>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div id="page1" class="hero">
+        <a href="top" class="smooth"></a>
+        <section class="hero-content">
+            <img src="img/thatme-frisco.jpg" alt="Photograph of Francisco Santana" class="thatme-frisco">
+            <h1>Francisco Santana</h1>
+            <h2>Web & Design</h2>
+            <p></p>
+        </section>
+    </div>
+    <div class="wrapper">
+        <div id="page2">
+            <a id="work" class="smooth"></a>
+            <h1>My Work</h1>
+            <p>Work page content goes here.</p>
+        </div>
+        <div id="page3">
+            <a id="about" class="smooth"></a>
+            <h1>About Me</h1>
+            <img src="img/gratt.png" alt="Photograph of Francisco Santana" class="profile-photo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet erat in nunc suscipit rutrum eu vitae turpis. Phasellus vulputate erat nec magna dapibus fermentum. Fusce mi lorem, mollis et dapibus in, placerat id orci. Praesent sodales felis aliquam elit consectetur, vitae ullamcorper magna pharetra. Mauris id ipsum sed neque aliquam condimentum eu semper justo. Suspendisse quis ullamcorper augue. Vivamus eget fringilla purus. Sed pretium ut leo sed molestie. In efficitur eget odio maximus dictum. Donec sit amet nibh non orci maximus iaculis. Donec et quam laoreet, eleifend eros et, hendrerit quam. Aliquam vitae ipsum justo. </p>
+        </div>
+        <div id="page4">
+            <a id="contact" class="smooth"></a>
+            <h1>Contact Me</h1>
+            <p>Conctact form goes here.</p>
+        </div>
+        <footer>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p class="footnote">&copy; 2016 Francisco Santana | Made in <a href="http://www.wikiwand.com/en/Dover,_New_Hampshire">Dover, NH</a></p>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+    <script>
+        $('.smooth').on('click', function() {
+            $.smoothScroll({
+                scrollElement: $('body'),
+                scrollTarget: '#' + this.id
+            });
+
+            return false;
+        });
+
+    </script>
+</body>
+
+</html>

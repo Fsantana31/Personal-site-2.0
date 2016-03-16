@@ -1,0 +1,366 @@
+/************************************
+GENERAL 
+*************************************/
+
+body {
+    background-color: white;
+    font-family: 'Merriweather', serif;
+    margin: auto;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+h3 {
+    margin: 0 0 1em 0;
+}
+
+/************************************
+COLORS
+*************************************/
+
+#bg {
+    background: #D62828;
+}
+h1,
+h2 {
+    color: #000;
+}
+header {
+    background: #fff;
+}
+nav {
+    background: #fff;
+}
+nav a.selected,
+nav a:hover {
+    color: #000;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/************************************
+HEADING
+*************************************/
+
+
+/*Make header sticky when scrolling!*/
+
+header {
+    z-index: 4000;
+    position: fixed;
+    float: left;
+    margin: 0 0 30px 0;
+    padding: 5px 0 0 0;
+    width: 1024px;
+}
+#logo {
+    text-align: center;
+    margin: 0;
+}
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px 0;
+    font-size: 1.75;
+    font-weight: 800;
+    line-height: 0.8em;
+}
+
+/************************************
+NAVIGATION
+*************************************/
+
+nav {
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin: 50px 0;
+    padding: 0;
+}
+nav a {
+    font-weight: 800;
+    padding: 15px 10px;
+    margin: 0;
+}
+
+/************************************
+SUB-HEADING
+*************************************/
+
+#sub-header {
+    z-index: 4000;
+    float: left;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 100%;
+}
+#tagline {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    margin: 5px 0 5px;
+    margin-left: 5%;
+    font-weight: normal;
+    line-height: 0.8em;
+}
+
+/************************************
+FOOTER
+*************************************/
+
+footer {
+    background: #333333;
+    padding: 20px 0;
+    height: 130px;
+    margin-top: 4em;
+}
+footer li {
+    display: inline;
+    padding: 5px;
+}
+footer ul {
+    padding-top: 15px;
+}
+.footnote {
+    color: #e1e3e7;
+    font-size: 0.75em;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/***p*********************************
+SECTIO:HERO
+*************************************/
+
+#page1 {
+    height: 93vh;
+    padding: 1rem 0 1rem;
+    position: relative;
+}
+.hero {
+    /* background-color: darkgray;*/
+    background-image: url(/img/hero-bg.jpg);
+    background-size: cover;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+    -ms-transform: translate(0, -50%);
+    /* IE 9 */
+    -webkit-transform: translate(0, -50%);
+    /* Safari */
+    transform: translate(0, -50%);
+    /*
+    display: table-cell;
+    vertical-align: middle;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    position: relative;*/
+}
+.hero-content h1 {
+    color: white;
+    margin: 5% 0 0;
+}
+.hero-content h2 {
+    color: white;
+}
+.thatme-frisco {
+    display: block;
+    max-width: 15rem;
+    margin: 0 auto 20px;
+    border-radius: 100%;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/************************************
+SECTION: WORK
+*************************************/
+
+#page2 {
+    height: 50vh;
+    padding: 50px 100px 20px;
+    background-color: gray;
+    /*position: absolute;
+    margin-top: -30px;
+    max-width: 824px;*/
+}
+#overlay {
+    -webkit-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    transform: translateY(-40px);
+}
+
+/************************************
+SECTION: PROFILE
+*************************************/
+
+#page3 {
+    background-color: darkgray;
+    height: 100vh;
+    padding: 5rem 5rem 20px;
+}
+.profile-photo {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 15px;
+    border-radius: 100%;
+    border: 7px solid white;
+}
+.about-text {
+    text-align: justify;
+}
+
+/************************************
+SECTION: CONTACT
+*************************************/
+
+
+/************************************
+RESPONSIVE
+*************************************/
+
+
+/*Larger that 1024px*/
+
+@media only screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 1024px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    /******************
+    NAVIGATION
+    *******************/
+    nav {
+        background: none;
+        float: right;
+        font-size: 1.125em;
+        margin-top: 0.75%;
+        margin-right: 5%;
+        text-align: right;
+        width: 45%;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 0;
+    }
+    #logo {
+        float: left;
+        margin-left: 5%;
+        text-align: left;
+        width: 45%;
+    }
+}
+
+/*In-between 768px and 1023px*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /************************************
+    SECTION:HERO
+    *************************************/
+    .hero-content h1 {
+        color: white;
+        font-size: 2em;
+        margin: 5% 0 0;
+    }
+    .hero-content h2 {
+        color: white;
+        font-size: 1em;
+    }
+    /******************
+    HEADER
+    *******************/
+    header {
+        z-index: 4000;
+        position: relative;
+        float: left;
+        margin: 0 0 30px 0;
+        padding: 5px 0 0 0;
+        width: 100%;
+    }
+    /******************
+    NAVIGATION
+    *******************/
+    nav {
+        background: none;
+        float: right;
+        font-size: 1.125em;
+        margin-top: 0.75%;
+        margin-right: 5%;
+        text-align: right;
+        width: 45%;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 0;
+    }
+    #logo {
+        float: left;
+        margin-left: 5%;
+        text-align: left;
+        width: 45%;
+    }
+}
+
+/*Everything 767px and lower*/
+
+@media only screen and (max-width: 767px) {
+    /************************************
+    SECTION:HERO
+    *************************************/
+    .hero-content h1 {
+        color: white;
+        font-size: 1em;
+        margin: 5% 0 0;
+    }
+    .hero-content h2 {
+        color: white;
+        font-size: 0.5em;
+    }
+    /******************
+    SECTION: ABOUT
+    *******************/
+    .profile-photo {
+        float: left;
+        margin: 0 5% 3% 0;
+    }
+    /******************
+    HEADER
+    *******************/
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 0.825em;
+        margin-bottom: 20px;
+    }
+}
