@@ -7,80 +7,150 @@
 
     <!-- Le Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:400italic,400,900,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/simple-line-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Le Scripts-->
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e) {
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 300,
+                    header = document.querySelector("header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header, "smaller");
+                } else {
+                    if (classie.has(header, "smaller")) {
+                        classie.remove(header, "smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+
+    </script>
+    <script>
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
 </head>
 
 <!--Le Body-->
 
 <body id="bg">
-    <div class="wrapper">
+    <div id="wrapper">
         <header>
-            <a href="#top" id="logo">
-                <h1>FS</h1>
-            </a>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="container clearix">
+
+                <h1 id="logo">
+                    <a href="#top">FS</a>
+                </h1>
+
+                <nav>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
         </header>
-    </div>
+        <!--/Header-->
+        <div id="main">
+            <div class="page1">
+                <a id="top"></a>
+                <section class="hero">
+                    <div class="container intro">
+                        <img src="img/thatme-frisco.jpg " alt="Photograph of Francisco Santana " class="thatme-frisco">
+                        <h1>Francisco Santana</h1>
+                        <h2>Designer &amp; Programmer | Student at UNH</h2>
+                    </div>
+                </section>
+            </div>
+            <div class="page2">
+                <a id="portfolio"></a>
+                <section class="portfolio">
+                    <div class="container">
+                        <h2>My Porfolio</h2>
+                        <p>Under Construction ;&#41;</p>
+                        <p>Super cool grid with content filtering goes here...</p>
+                    </div>
+                </section>
 
-    <div id="page1" class="hero">
-        <a href="top" class="smooth"></a>
-        <section class="hero-content">
-            <img src="img/thatme-frisco.jpg" alt="Photograph of Francisco Santana" class="thatme-frisco">
-            <h1>Francisco Santana</h1>
-            <h2>Web & Design</h2>
-            <p></p>
-        </section>
-    </div>
-    <div class="wrapper">
-        <div id="page2">
-            <a id="work" class="smooth"></a>
-            <h1>My Work</h1>
-            <p>Work page content goes here.</p>
+            </div>
+            <div class="page3">
+                <a id="about"></a>
+                <section>
+                    <div class="container">
+                        <h2>About Francisco Santana</h2>
+                        <img src="img/gratt.png" alt="Photograph of Francisco Santana " class="profile-photo ">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet erat in nunc suscipit rutrum eu vitae turpis. Phasellus vulputate erat nec magna dapibus fermentum. Fusce mi lorem, mollis et dapibus in, placerat id orci. Praesent sodales felis aliquam elit consectetur, vitae ullamcorper magna pharetra. Mauris id ipsum sed neque aliquam condimentum eu semper justo. Suspendisse quis ullamcorper augue. Vivamus eget fringilla purus. Sed pretium ut leo sed molestie. In efficitur eget odio maximus dictum. Donec sit amet nibh non orci maximus iaculis. Donec et quam laoreet, eleifend eros et, hendrerit quam. Aliquam vitae ipsum justo.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="page4">
+                <a id="contact"></a>
+                <section>
+                    <div class="container">
+                        <h2>Get in touch</h2>
+                        <div class="group">
+                            <div class="contact-form">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </div>
+                            <div class="social-icons">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Facebook"><img src="img/icons/facebook.png" alt="Facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Twitter"><img src="img/icons/twitter.png" alt="Twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Linked In"><img src="img/icons/linkedin.png" alt="Linked In"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Instagram"><img src="img/icons/instagram.png" alt="Instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Email"><img src="img/icons/instagram.png" alt="Instagram"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End group-->
+                </section>
+            </div>
         </div>
-        <div id="page3">
-            <a id="about" class="smooth"></a>
-            <h1>About Me</h1>
-            <img src="img/gratt.png" alt="Photograph of Francisco Santana" class="profile-photo">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet erat in nunc suscipit rutrum eu vitae turpis. Phasellus vulputate erat nec magna dapibus fermentum. Fusce mi lorem, mollis et dapibus in, placerat id orci. Praesent sodales felis aliquam elit consectetur, vitae ullamcorper magna pharetra. Mauris id ipsum sed neque aliquam condimentum eu semper justo. Suspendisse quis ullamcorper augue. Vivamus eget fringilla purus. Sed pretium ut leo sed molestie. In efficitur eget odio maximus dictum. Donec sit amet nibh non orci maximus iaculis. Donec et quam laoreet, eleifend eros et, hendrerit quam. Aliquam vitae ipsum justo. </p>
-        </div>
-        <div id="page4">
-            <a id="contact" class="smooth"></a>
-            <h1>Contact Me</h1>
-            <p>Conctact form goes here.</p>
-        </div>
+        <!--#main-->
+
         <footer>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <p class="footnote">&copy; 2016 Francisco Santana | Made in <a href="http://www.wikiwand.com/en/Dover,_New_Hampshire">Dover, NH</a></p>
+            <div>
+                <div class="container clearfix">
+                    <p class="footnote">&copy; 2016 Francisco Santana | Made in <a href="http://www.wikiwand.com/en/Dover,_New_Hampshire ">Dover, NH</a></p>
+                </div>
+            </div>
         </footer>
+
     </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
-    <script>
-        $('.smooth').on('click', function() {
-            $.smoothScroll({
-                scrollElement: $('body'),
-                scrollTarget: '#' + this.id
-            });
-
-            return false;
-        });
-
-    </script>
 </body>
 
 </html>

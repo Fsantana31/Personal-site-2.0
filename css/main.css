@@ -1,21 +1,129 @@
 /************************************
-GENERAL 
+IMPORT GOOGLE WEB FONTS
 *************************************/
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700);
+
+/************************************
+GLOBAL
+*************************************/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body {
-    background-color: white;
-    font-family: 'Merriweather', serif;
-    margin: auto;
+    color: #505050;
+    margin: 0;
+    font: 1em/1.5 'Roboto', Helvetica, Arial, sans-serif;
 }
-a {
-    color: #999;
-    text-decoration: none;
+h1,
+h2 {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
-img {
-    max-width: 100%;
+h1 {
+    font-size: 5.625rem;
+    /* 90px/16px  */
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
+}
+h2 {
+    font-size: 3.3125em;
+    /* 53px/16px  */
+    color: rgba(255, 255, 255, 1);
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 0 0 .5em;
+    /* 0 0 26px */
 }
 h3 {
-    margin: 0 0 1em 0;
+    font-size: 1.25em;
+    /* 20px/16px  */
+    color: #48525c;
+    line-height: 1.2;
+    margin-bottom: 1.7em;
+    /* 34px */
+}
+
+/*----Links----*/
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {}
+
+/****/
+
+img {
+    max-width: 100%;
+    border: none;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+/* Floated Columns ------------------ */
+
+.contact-form,
+.social-icons {
+    width: 46.5%;
+}
+.contact-form {
+    float: left;
+}
+.social-icons {
+    float: right;
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/************************************
+TEMPLATE
+*************************************/
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+#main {
+    background-color: #fff;
+    padding-top: 150px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+section {
+    padding: 60px 0;
+}
+section h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+section p {
+    margin-bottom: 30px;
+}
+section p:last-child {
+    margin-bottom: 0;
 }
 
 /************************************
@@ -24,10 +132,6 @@ COLORS
 
 #bg {
     background: #D62828;
-}
-h1,
-h2 {
-    color: #000;
 }
 header {
     background: #fff;
@@ -48,73 +152,74 @@ p {
 HEADING
 *************************************/
 
-
-/*Make header sticky when scrolling!*/
-
 header {
-    z-index: 4000;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
     position: fixed;
-    float: left;
-    margin: 0 0 30px 0;
-    padding: 5px 0 0 0;
-    width: 1024px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
 }
-#logo {
-    text-align: center;
+header h1#logo {
+    display: inline-block;
+    height: 150px;
     margin: 0;
-}
-header h1 {
+    line-height: 150px;
+    float: left;
     font-family: 'Montserrat', sans-serif;
-    margin: 15px 0;
-    font-size: 1.75;
-    font-weight: 800;
-    line-height: 0.8em;
+    font-size: 60px;
+    color: black;
+    font-weight: 400;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /************************************
 NAVIGATION
 *************************************/
 
-nav {
-    text-align: center;
-    padding: 10px 0;
-    margin: 20px 0 0;
+header h1 a {
+    color: black;
 }
-nav ul {
-    list-style: none;
-    margin: 0 10px;
-    padding: 0;
+header nav {
+    display: inline-block;
+    float: right;
 }
-nav li {
-    display: inline;
-    margin: 50px 0;
-    padding: 0;
+header nav a {
+    line-height: 150px;
+    margin-left: 25px;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
-nav a {
-    font-weight: 800;
-    padding: 15px 10px;
-    margin: 0;
+header nav a:hover {
+    /*color: white;*/
 }
-
-/************************************
-SUB-HEADING
-*************************************/
-
-#sub-header {
-    z-index: 4000;
-    float: left;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    width: 100%;
+header.smaller {
+    height: 75px;
 }
-#tagline {
-    float: left;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75em;
-    margin: 5px 0 5px;
-    margin-left: 5%;
-    font-weight: normal;
-    line-height: 0.8em;
+header.smaller h1#logo {
+    width: 150px;
+    height: 50px;
+    line-height: 75px;
+    font-size: 30px;
+}
+header.smaller nav a {
+    line-height: 75px;
 }
 
 /************************************
@@ -122,64 +227,64 @@ FOOTER
 *************************************/
 
 footer {
-    background: #333333;
-    padding: 20px 0;
-    height: 130px;
-    margin-top: 4em;
-}
-footer li {
-    display: inline;
-    padding: 5px;
-}
-footer ul {
-    padding-top: 15px;
+    position: relative;
+    background-color: white;
+    padding: 60px;
+    height: 150px;
+    margin: 0 auto;
 }
 .footnote {
-    color: #e1e3e7;
-    font-size: 0.75em;
-    padding-top: 50px;
+    color: black;
+    font-size: 1em;
     text-align: center;
 }
 
-/***p*********************************
+/*************************************
 SECTIO:HERO
 *************************************/
 
-#page1 {
-    height: 93vh;
-    padding: 1rem 0 1rem;
+.page1 {
+    height: 90vh;
     position: relative;
 }
 .hero {
-    /* background-color: darkgray;*/
-    background-image: url(/img/hero-bg.jpg);
+    background: url(/img/bg-hero_code.jpg) no-repeat center center;
     background-size: cover;
+    height: 100%;
 }
-.hero-content {
+.hero:before {
+    content: '';
     position: absolute;
-    top: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+    opacity: .8;
+}
+.hero .intro {
+    padding: 1.75rem;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.hero div h1 {
+    font-size: 3.75rem;
+    /* 90px/16px  */
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .8);
     text-align: center;
-    width: 100%;
-    font-size: 36px;
-    -ms-transform: translate(0, -50%);
-    /* IE 9 */
-    -webkit-transform: translate(0, -50%);
-    /* Safari */
-    transform: translate(0, -50%);
-    /*
-    display: table-cell;
-    vertical-align: middle;
-    clear: both;
-    margin: 0;
-    padding: 0;
-    position: relative;*/
 }
-.hero-content h1 {
-    color: white;
-    margin: 5% 0 0;
-}
-.hero-content h2 {
-    color: white;
+.hero div h2 {
+    color: #fff;
+    line-height: 1;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 .thatme-frisco {
     display: block;
@@ -190,31 +295,24 @@ SECTIO:HERO
 }
 
 /************************************
-SECTION: WORK
+SECTION: PORTFOLIO
 *************************************/
 
-#page2 {
-    height: 50vh;
-    padding: 50px 100px 20px;
-    background-color: gray;
-    /*position: absolute;
-    margin-top: -30px;
-    max-width: 824px;*/
+.page2 {
+    height: 100vh;
+    position: relative;
 }
-#overlay {
-    -webkit-transform: translateY(-40px);
-    -ms-transform: translateY(-40px);
-    transform: translateY(-40px);
+.portfolio div h2 {
+    color: black;
 }
 
 /************************************
 SECTION: PROFILE
 *************************************/
 
-#page3 {
+.page3 {
     background-color: darkgray;
     height: 100vh;
-    padding: 5rem 5rem 20px;
 }
 .profile-photo {
     display: block;
@@ -231,136 +329,104 @@ SECTION: PROFILE
 SECTION: CONTACT
 *************************************/
 
+.page4 {
+    background-color: darkred;
+    height: 50vh;
+}
+.social-icons {
+    text-align: center;
+    margin: 0 auto;
+}
+.social-icons li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 30px;
+}
 
 /************************************
-RESPONSIVE
+    RESPONSIVE
 *************************************/
 
 
 /*Larger that 1024px*/
 
-@media only screen and (min-width: 1024px) {
-    .wrapper {
-        max-width: 1024px;
-        width: 95%;
-        margin: 0 auto;
-    }
-    /******************
-    NAVIGATION
-    *******************/
-    nav {
-        background: none;
-        float: right;
-        font-size: 1.125em;
-        margin-top: 0.75%;
-        margin-right: 5%;
-        text-align: right;
-        width: 45%;
-    }
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    nav li {
-        display: inline-block;
-        margin: 10px 0;
-        padding: 0;
-    }
-    #logo {
-        float: left;
-        margin-left: 5%;
-        text-align: left;
-        width: 45%;
-    }
-}
+@media only screen and (min-width: 1024px) {}
 
 /*In-between 768px and 1023px*/
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /************************************
-    SECTION:HERO
+        SECTION:HERO
     *************************************/
-    .hero-content h1 {
-        color: white;
-        font-size: 2em;
-        margin: 5% 0 0;
+    .hero div h1 {
+        font-size: 3rem;
+        line-height: 1.3;
     }
-    .hero-content h2 {
-        color: white;
-        font-size: 1em;
-    }
-    /******************
-    HEADER
-    *******************/
-    header {
-        z-index: 4000;
-        position: relative;
-        float: left;
-        margin: 0 0 30px 0;
-        padding: 5px 0 0 0;
-        width: 100%;
-    }
-    /******************
-    NAVIGATION
-    *******************/
-    nav {
-        background: none;
-        float: right;
-        font-size: 1.125em;
-        margin-top: 0.75%;
-        margin-right: 5%;
-        text-align: right;
-        width: 45%;
-    }
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    nav li {
-        display: inline-block;
-        margin: 10px 0;
-        padding: 0;
-    }
-    #logo {
-        float: left;
-        margin-left: 5%;
-        text-align: left;
-        width: 45%;
+    .hero div h2 {
+        font-size: 1.25rem;
+        line-height: 1;
     }
 }
 
 /*Everything 767px and lower*/
 
+
+/*need to fix smaller sizes for phones like iphone 5*/
+
 @media only screen and (max-width: 767px) {
-    /************************************
-    SECTION:HERO
-    *************************************/
-    .hero-content h1 {
-        color: white;
-        font-size: 1em;
-        margin: 5% 0 0;
-    }
-    .hero-content h2 {
-        color: white;
-        font-size: 0.5em;
-    }
-    /******************
-    SECTION: ABOUT
-    *******************/
-    .profile-photo {
-        float: left;
-        margin: 0 5% 3% 0;
-    }
     /******************
     HEADER
     *******************/
-    h1 {
-        font-size: 2.5em;
+    header h1#logo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
     }
-    h2 {
-        font-size: 0.825em;
-        margin-bottom: 20px;
+    header nav {
+        display: block;
+        float: none;
+        height: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    header nav a {
+        line-height: 50px;
+        margin: 0 10px;
+    }
+    header.smaller {
+        height: 75px;
+    }
+    header.smaller h1#logo {
+        height: 40px;
+        line-height: 40px;
+        font-size: 30px;
+    }
+    header.smaller nav {
+        height: 35px;
+    }
+    header.smaller nav a {
+        line-height: 35px;
+    }
+    /************************************
+        SECTION:HERO
+    *************************************/
+    .hero div h1 {
+        font-size: 1.85rem;
+        line-height: 1.3;
+    }
+    .hero div h2 {
+        font-size: 1rem;
+        line-height: 1;
+    }
+    /******************
+        SECTION: ABOUT
+        *******************/
+    .contact-form,
+    .social-icons {
+        float: none;
+        width: 100%;
     }
 }
