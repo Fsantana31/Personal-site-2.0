@@ -40,11 +40,20 @@
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
                         $('html, body').animate({
-                            scrollTop: target.offset().top
+                            scrollTop: target.offset().top - $('header').height()
                         }, 1000);
                         return false;
                     }
                 }
+            });
+        });
+
+    </script>
+    <script>
+        $(function() {
+            $('nav a').click(function() {
+                $('nav a').removeClass('active');
+                $(this).addClass('active');
             });
         });
 
@@ -77,7 +86,8 @@
                     <div class="container intro">
                         <img src="img/thatme-frisco.jpg " alt="Photograph of Francisco Santana " class="thatme-frisco">
                         <h1>Francisco Santana</h1>
-                        <h2>Designer &amp; Programmer | Student at UNH</h2>
+                        <hr/>
+                        <h2>Designer &amp; Programmer</h2>
                     </div>
                 </section>
             </div>
@@ -85,20 +95,20 @@
                 <a id="portfolio"></a>
                 <section class="portfolio">
                     <div class="container">
-                        <h2>My Porfolio</h2>
+                        <h2>Portfolio.</h2>
                         <p>Under Construction ;&#41;</p>
                         <p>Super cool grid with content filtering goes here...</p>
                     </div>
                 </section>
-
             </div>
             <div class="page3">
                 <a id="about"></a>
-                <section>
+                <section class="about-me">
                     <div class="container">
-                        <h2>About Francisco Santana</h2>
-                        <img src="img/gratt.png" alt="Photograph of Francisco Santana " class="profile-photo ">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet erat in nunc suscipit rutrum eu vitae turpis. Phasellus vulputate erat nec magna dapibus fermentum. Fusce mi lorem, mollis et dapibus in, placerat id orci. Praesent sodales felis aliquam elit consectetur, vitae ullamcorper magna pharetra. Mauris id ipsum sed neque aliquam condimentum eu semper justo. Suspendisse quis ullamcorper augue. Vivamus eget fringilla purus. Sed pretium ut leo sed molestie. In efficitur eget odio maximus dictum. Donec sit amet nibh non orci maximus iaculis. Donec et quam laoreet, eleifend eros et, hendrerit quam. Aliquam vitae ipsum justo.</p>
+                        <h2>About Me.</h2>
+                        <div class="about-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet erat in nunc suscipit rutrum eu vitae turpis. Phasellus vulputate erat nec magna dapibus fermentum. Fusce mi lorem, mollis et dapibus in, placerat id orci. Praesent sodales felis aliquam elit consectetur, vitae ullamcorper magna pharetra. Mauris id ipsum sed neque aliquam condimentum eu semper justo. Suspendisse quis ullamcorper augue. Vivamus eget fringilla purus. Sed pretium ut leo sed molestie. In efficitur eget odio maximus dictum. Donec sit amet nibh non orci maximus iaculis. Donec et quam laoreet, eleifend eros et, hendrerit quam. Aliquam vitae ipsum justo.</p>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -106,7 +116,7 @@
                 <a id="contact"></a>
                 <section>
                     <div class="container">
-                        <h2>Get in touch</h2>
+                        <h2>Contact.</h2>
                         <div class="group">
                             <div class="contact-form">
                                 <br/>
@@ -114,25 +124,6 @@
                                 <br/>
                                 <br/>
                                 <br/>
-                            </div>
-                            <div class="social-icons">
-                                <ul>
-                                    <li>
-                                        <a href="#" title="Facebook"><img src="img/icons/facebook.png" alt="Facebook"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Twitter"><img src="img/icons/twitter.png" alt="Twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Linked In"><img src="img/icons/linkedin.png" alt="Linked In"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Instagram"><img src="img/icons/instagram.png" alt="Instagram"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="Email"><img src="img/icons/instagram.png" alt="Instagram"></a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -144,6 +135,25 @@
 
         <footer>
             <div>
+                <div class="social-icons">
+                    <ul>
+                        <li>
+                            <a href="#" title="Facebook"><img src="img/icons/facebook.png" alt="Facebook"></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Twitter"><img src="img/icons/twitter.png" alt="Twitter"></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Linked In"><img src="img/icons/linkedin.png" alt="Linked In"></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Instagram"><img src="img/icons/instagram.png" alt="Instagram"></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Email"><img src="img/icons/instagram.png" alt="Instagram"></a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="container clearfix">
                     <p class="footnote">&copy; 2016 Francisco Santana | Made in <a href="http://www.wikiwand.com/en/Dover,_New_Hampshire ">Dover, NH</a></p>
                 </div>

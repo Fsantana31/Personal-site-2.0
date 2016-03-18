@@ -2,7 +2,7 @@
 IMPORT GOOGLE WEB FONTS
 *************************************/
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400,700);
 
 /************************************
 GLOBAL
@@ -72,27 +72,6 @@ img {
     content: "";
     clear: both;
     height: 0;
-}
-
-/* Floated Columns ------------------ */
-
-.contact-form,
-.social-icons {
-    width: 46.5%;
-}
-.contact-form {
-    float: left;
-}
-.social-icons {
-    float: right;
-}
-
-/* Float Clearfix ------------------ */
-
-.group:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /************************************
@@ -196,6 +175,7 @@ header nav {
 }
 header nav a {
     line-height: 150px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     margin-left: 25px;
     color: black;
     font-weight: 700;
@@ -204,10 +184,15 @@ header nav a {
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s;
+    padding: 6px 6px;
 }
 header nav a:hover {
-    /*color: white;*/
+    background-color: black;
+    color: white;
+}
+header nav a.active {
+    background-color: black;
+    color: white;
 }
 header.smaller {
     height: 75px;
@@ -244,11 +229,11 @@ SECTIO:HERO
 *************************************/
 
 .page1 {
-    height: 90vh;
+    height: 97vh;
     position: relative;
 }
 .hero {
-    background: url(/img/bg-hero_code.jpg) no-repeat center center;
+    /* background: url(/img/bg-hero_code.jpg) no-repeat center center;*/
     background-size: cover;
     height: 100%;
 }
@@ -307,22 +292,24 @@ SECTION: PORTFOLIO
 }
 
 /************************************
-SECTION: PROFILE
+SECTION: ABOUT
 *************************************/
 
 .page3 {
-    background-color: darkgray;
+    background-color: black;
     height: 100vh;
 }
-.profile-photo {
-    display: block;
-    max-width: 150px;
-    margin: 0 auto 15px;
-    border-radius: 100%;
-    border: 7px solid white;
+.about-me div h2 {
+    border-bottom: 2px solid white;
+    color: white;
 }
 .about-text {
-    text-align: justify;
+    margin: 5px 0;
+    width: 46.5%;
+    float: left;
+    line-height: 1.5;
+    font-weight: 300;
+    color: white;
 }
 
 /************************************
@@ -331,7 +318,7 @@ SECTION: CONTACT
 
 .page4 {
     background-color: darkred;
-    height: 50vh;
+    height: 80vh;
 }
 .social-icons {
     text-align: center;
@@ -424,9 +411,11 @@ SECTION: CONTACT
     /******************
         SECTION: ABOUT
         *******************/
-    .contact-form,
-    .social-icons {
+    .about-text {
         float: none;
         width: 100%;
     }
+    /******************
+        SECTION: CONTACT
+        *******************/
 }
